@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_printing_simple
+gtkmm_printing_simple_SOURCES=main.cpp examplewindow.cpp printformoperation.cpp
+
+gtkmm_printing_simple_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_printing_simple_LDADD=$(GTKMM_LIBS)
