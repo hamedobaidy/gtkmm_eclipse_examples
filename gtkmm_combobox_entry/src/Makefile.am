@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_combobox_entry
+gtkmm_combobox_entry_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_combobox_entry_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_combobox_entry_LDADD=$(GTKMM_LIBS)

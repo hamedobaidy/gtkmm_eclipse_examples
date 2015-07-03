@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_filechooserdialog
+gtkmm_filechooserdialog_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_filechooserdialog_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_filechooserdialog_LDADD=$(GTKMM_LIBS)

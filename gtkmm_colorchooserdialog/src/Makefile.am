@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_colorchooserdialog
+gtkmm_colorchooserdialog_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_colorchooserdialog_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_colorchooserdialog_LDADD=$(GTKMM_LIBS)

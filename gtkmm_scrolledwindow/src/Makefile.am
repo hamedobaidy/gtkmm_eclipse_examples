@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_scrolledwindow
+gtkmm_scrolledwindow_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_scrolledwindow_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_scrolledwindow_LDADD=$(GTKMM_LIBS)

@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_messagedialog
+gtkmm_messagedialog_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_messagedialog_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_messagedialog_LDADD=$(GTKMM_LIBS)

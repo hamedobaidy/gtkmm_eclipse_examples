@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_editable_cells
+gtkmm_editable_cells_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_editable_cells_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_editable_cells_LDADD=$(GTKMM_LIBS)
