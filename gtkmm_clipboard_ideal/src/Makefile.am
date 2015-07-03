@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_clipboard_ideal
+gtkmm_clipboard_ideal_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_clipboard_ideal_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_clipboard_ideal_LDADD=$(GTKMM_LIBS)
