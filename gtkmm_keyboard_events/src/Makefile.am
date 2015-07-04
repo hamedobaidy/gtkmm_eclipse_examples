@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_keyboard_events
+gtkmm_keyboard_events_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_keyboard_events_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_keyboard_events_LDADD=$(GTKMM_LIBS)
