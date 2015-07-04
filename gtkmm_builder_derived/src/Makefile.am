@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_builder_derived
+gtkmm_builder_derived_SOURCES=main.cpp deriveddialog.cpp
+
+gtkmm_builder_derived_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_builder_derived_LDADD=$(GTKMM_LIBS)
