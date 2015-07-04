@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_event_propagation
+gtkmm_event_propagation_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_event_propagation_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_event_propagation_LDADD=$(GTKMM_LIBS)
