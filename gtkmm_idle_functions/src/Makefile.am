@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_idle_functions
+gtkmm_idle_functions_SOURCES=main.cpp idleexample.cpp
+
+gtkmm_idle_functions_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_idle_functions_LDADD=$(GTKMM_LIBS)
