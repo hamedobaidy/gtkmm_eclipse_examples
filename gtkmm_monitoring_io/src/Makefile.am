@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_monitoring_io
+gtkmm_monitoring_io_SOURCES=main.cpp
+
+gtkmm_monitoring_io_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_monitoring_io_LDADD=$(GTKMM_LIBS)
