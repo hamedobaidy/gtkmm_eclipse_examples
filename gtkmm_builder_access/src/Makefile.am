@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_builder_access
+gtkmm_builder_access_SOURCES=main.cpp
+
+gtkmm_builder_access_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_builder_access_LDADD=$(GTKMM_LIBS)
