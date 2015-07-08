@@ -79,7 +79,7 @@ POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
 target_triplet = x86_64-unknown-linux-gnu
-bin_PROGRAMS = gtkmm_helloworld$(EXEEXT)
+bin_PROGRAMS = gtkmm_helloworld$(EXEEXT) my_hello$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -97,6 +97,10 @@ am_gtkmm_helloworld_OBJECTS = gtkmm_helloworld-main.$(OBJEXT) \
 gtkmm_helloworld_OBJECTS = $(am_gtkmm_helloworld_OBJECTS)
 am__DEPENDENCIES_1 =
 gtkmm_helloworld_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_my_hello_OBJECTS = my_hello-my_main.$(OBJEXT) \
+	my_hello-my_hello.$(OBJEXT)
+my_hello_OBJECTS = $(am_my_hello_OBJECTS)
+my_hello_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -130,8 +134,8 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(gtkmm_helloworld_SOURCES)
-DIST_SOURCES = $(gtkmm_helloworld_SOURCES)
+SOURCES = $(gtkmm_helloworld_SOURCES) $(my_hello_SOURCES)
+DIST_SOURCES = $(gtkmm_helloworld_SOURCES) $(my_hello_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -157,12 +161,12 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/missing autoconf
-AUTOHEADER = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/missing autoheader
-AUTOMAKE = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/missing automake-1.14
+AUTOCONF = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/missing autoconf
+AUTOHEADER = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/missing autoheader
+AUTOMAKE = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/missing automake-1.14
 AWK = gawk
 CPPFLAGS = 
 CXX = g++
@@ -186,7 +190,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/missing makeinfo
+MAKEINFO = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = gtkmm_helloworld
@@ -204,10 +208,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0
-abs_builddir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/src
-abs_srcdir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/src
-abs_top_builddir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld
-abs_top_srcdir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld
+abs_builddir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/src
+abs_srcdir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/src
+abs_top_builddir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld
+abs_top_srcdir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
@@ -234,7 +238,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_helloworld/install-sh
+install_sh = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_helloworld/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -261,6 +265,9 @@ top_srcdir = ..
 gtkmm_helloworld_SOURCES = main.cpp helloworld.cpp
 gtkmm_helloworld_CPPFLAGS = $(GTKMM_CFLAGS)
 gtkmm_helloworld_LDADD = $(GTKMM_LIBS)
+my_hello_SOURCES = my_main.cpp my_hello.cpp
+my_hello_CPPFLAGS = $(GTKMM_CFLAGS)
+my_hello_LDADD = $(GTKMM_LIBS)
 all: all-am
 
 .SUFFIXES:
@@ -342,6 +349,10 @@ gtkmm_helloworld$(EXEEXT): $(gtkmm_helloworld_OBJECTS) $(gtkmm_helloworld_DEPEND
 	@rm -f gtkmm_helloworld$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(gtkmm_helloworld_OBJECTS) $(gtkmm_helloworld_LDADD) $(LIBS)
 
+my_hello$(EXEEXT): $(my_hello_OBJECTS) $(my_hello_DEPENDENCIES) $(EXTRA_my_hello_DEPENDENCIES) 
+	@rm -f my_hello$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(my_hello_OBJECTS) $(my_hello_LDADD) $(LIBS)
+
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
@@ -350,6 +361,8 @@ distclean-compile:
 
 include ./$(DEPDIR)/gtkmm_helloworld-helloworld.Po
 include ./$(DEPDIR)/gtkmm_helloworld-main.Po
+include ./$(DEPDIR)/my_hello-my_hello.Po
+include ./$(DEPDIR)/my_hello-my_main.Po
 
 .cpp.o:
 	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -392,6 +405,34 @@ gtkmm_helloworld-helloworld.obj: helloworld.cpp
 #	$(AM_V_CXX)source='helloworld.cpp' object='gtkmm_helloworld-helloworld.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(gtkmm_helloworld_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o gtkmm_helloworld-helloworld.obj `if test -f 'helloworld.cpp'; then $(CYGPATH_W) 'helloworld.cpp'; else $(CYGPATH_W) '$(srcdir)/helloworld.cpp'; fi`
+
+my_hello-my_main.o: my_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT my_hello-my_main.o -MD -MP -MF $(DEPDIR)/my_hello-my_main.Tpo -c -o my_hello-my_main.o `test -f 'my_main.cpp' || echo '$(srcdir)/'`my_main.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/my_hello-my_main.Tpo $(DEPDIR)/my_hello-my_main.Po
+#	$(AM_V_CXX)source='my_main.cpp' object='my_hello-my_main.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o my_hello-my_main.o `test -f 'my_main.cpp' || echo '$(srcdir)/'`my_main.cpp
+
+my_hello-my_main.obj: my_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT my_hello-my_main.obj -MD -MP -MF $(DEPDIR)/my_hello-my_main.Tpo -c -o my_hello-my_main.obj `if test -f 'my_main.cpp'; then $(CYGPATH_W) 'my_main.cpp'; else $(CYGPATH_W) '$(srcdir)/my_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/my_hello-my_main.Tpo $(DEPDIR)/my_hello-my_main.Po
+#	$(AM_V_CXX)source='my_main.cpp' object='my_hello-my_main.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o my_hello-my_main.obj `if test -f 'my_main.cpp'; then $(CYGPATH_W) 'my_main.cpp'; else $(CYGPATH_W) '$(srcdir)/my_main.cpp'; fi`
+
+my_hello-my_hello.o: my_hello.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT my_hello-my_hello.o -MD -MP -MF $(DEPDIR)/my_hello-my_hello.Tpo -c -o my_hello-my_hello.o `test -f 'my_hello.cpp' || echo '$(srcdir)/'`my_hello.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/my_hello-my_hello.Tpo $(DEPDIR)/my_hello-my_hello.Po
+#	$(AM_V_CXX)source='my_hello.cpp' object='my_hello-my_hello.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o my_hello-my_hello.o `test -f 'my_hello.cpp' || echo '$(srcdir)/'`my_hello.cpp
+
+my_hello-my_hello.obj: my_hello.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT my_hello-my_hello.obj -MD -MP -MF $(DEPDIR)/my_hello-my_hello.Tpo -c -o my_hello-my_hello.obj `if test -f 'my_hello.cpp'; then $(CYGPATH_W) 'my_hello.cpp'; else $(CYGPATH_W) '$(srcdir)/my_hello.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/my_hello-my_hello.Tpo $(DEPDIR)/my_hello-my_hello.Po
+#	$(AM_V_CXX)source='my_hello.cpp' object='my_hello-my_hello.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(my_hello_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o my_hello-my_hello.obj `if test -f 'my_hello.cpp'; then $(CYGPATH_W) 'my_hello.cpp'; else $(CYGPATH_W) '$(srcdir)/my_hello.cpp'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
