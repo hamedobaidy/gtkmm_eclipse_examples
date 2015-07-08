@@ -10,11 +10,11 @@
 #include "my_checkbutton.h"
 
 int main(int argc, char * argv[]) {
-	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "com.hamedapps.gtkmm.checkbutton.example");
+	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv,
+			"com.hamedapps.gtkmm.checkbutton.example");
 
 	MyCheckButton window;
 
 	return app->run(window);
 }
-
 

@@ -5,15 +5,16 @@
  *      Author: hamed
  */
 
-
 #include <gtkmm/application.h>
 
 #include <my_radiobutton.h>
 
 int main(int argc, char * argv[]) {
-	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "com.hamedapps.gtkmm.radiobutton.example");
+	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv,
+			"com.hamedapps.gtkmm.radiobutton.example");
 
-	MyRadioButton window;;
+	MyRadioButton window;
+	;
 
 	return app->run(window);
 }

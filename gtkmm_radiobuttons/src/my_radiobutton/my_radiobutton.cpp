@@ -54,10 +54,14 @@ MyRadioButton::MyRadioButton() :
 	m_Button_Close.grab_default();
 
 	// Connect signals
-	m_Button_Close.signal_clicked().connect(sigc::mem_fun(*this, &MyRadioButton::on_button_clicked));
-	m_RadioButton1.signal_clicked().connect(sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
-	m_RadioButton2.signal_clicked().connect(sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
-	m_RadioButton3.signal_clicked().connect(sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
+	m_Button_Close.signal_clicked().connect(
+			sigc::mem_fun(*this, &MyRadioButton::on_button_clicked));
+	m_RadioButton1.signal_clicked().connect(
+			sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
+	m_RadioButton2.signal_clicked().connect(
+			sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
+	m_RadioButton3.signal_clicked().connect(
+			sigc::mem_fun(*this, &MyRadioButton::on_radiobuttons_selection));
 
 	// show all childs of window
 	show_all_children();
