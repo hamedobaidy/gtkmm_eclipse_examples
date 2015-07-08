@@ -14,7 +14,7 @@ int main(int argc, char * argv[]) {
 
 	MyCheckButton window;
 
-	app->run(window);
+	return app->run(window);
 }
 
 
