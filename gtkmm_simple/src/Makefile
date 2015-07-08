@@ -79,7 +79,8 @@ POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
 target_triplet = x86_64-unknown-linux-gnu
-bin_PROGRAMS = gtkmm_simple$(EXEEXT)
+bin_PROGRAMS = gtkmm_simple$(EXEEXT) simple$(EXEEXT) \
+	simple_window$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -96,6 +97,13 @@ am_gtkmm_simple_OBJECTS = gtkmm_simple-gtkmm_simple.$(OBJEXT)
 gtkmm_simple_OBJECTS = $(am_gtkmm_simple_OBJECTS)
 am__DEPENDENCIES_1 =
 gtkmm_simple_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_simple_OBJECTS = simple-simple.$(OBJEXT)
+simple_OBJECTS = $(am_simple_OBJECTS)
+simple_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_simple_window_OBJECTS = simple_window-simple_window.$(OBJEXT) \
+	simple_window-main.$(OBJEXT)
+simple_window_OBJECTS = $(am_simple_window_OBJECTS)
+simple_window_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -129,8 +137,10 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(gtkmm_simple_SOURCES)
-DIST_SOURCES = $(gtkmm_simple_SOURCES)
+SOURCES = $(gtkmm_simple_SOURCES) $(simple_SOURCES) \
+	$(simple_window_SOURCES)
+DIST_SOURCES = $(gtkmm_simple_SOURCES) $(simple_SOURCES) \
+	$(simple_window_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -156,12 +166,12 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/missing autoconf
-AUTOHEADER = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/missing autoheader
-AUTOMAKE = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/missing automake-1.14
+AUTOCONF = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/missing autoconf
+AUTOHEADER = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/missing autoheader
+AUTOMAKE = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/missing automake-1.14
 AWK = gawk
 CPPFLAGS = 
 CXX = g++
@@ -185,7 +195,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/missing makeinfo
+MAKEINFO = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
 PACKAGE = gtkmm_simple
@@ -203,10 +213,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0
-abs_builddir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/src
-abs_srcdir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/src
-abs_top_builddir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple
-abs_top_srcdir = /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple
+abs_builddir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/src
+abs_srcdir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/src
+abs_top_builddir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple
+abs_top_srcdir = /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple
 ac_ct_CXX = g++
 am__include = include
 am__leading_dot = .
@@ -233,7 +243,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/hamed/Documents/Mars/C++/workspace/gtkmm_simple/install-sh
+install_sh = ${SHELL} /home/hamed/git/gtkmm_eclipse_examples/gtkmm_simple/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -260,6 +270,12 @@ top_srcdir = ..
 gtkmm_simple_SOURCES = gtkmm_simple.cpp
 gtkmm_simple_CPPFLAGS = $(GTKMM_CFLAGS)
 gtkmm_simple_LDADD = $(GTKMM_LIBS)
+simple_SOURCES = simple.cpp
+simple_CPPFLAGS = $(GTKMM_CFLAGS)
+simple_LDADD = $(GTKMM_LIBS)
+simple_window_SOURCES = simple_window.cpp main.cpp
+simple_window_CPPFLAGS = $(GTKMM_CFLAGS)
+simple_window_LDADD = $(GTKMM_LIBS)
 all: all-am
 
 .SUFFIXES:
@@ -341,6 +357,14 @@ gtkmm_simple$(EXEEXT): $(gtkmm_simple_OBJECTS) $(gtkmm_simple_DEPENDENCIES) $(EX
 	@rm -f gtkmm_simple$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(gtkmm_simple_OBJECTS) $(gtkmm_simple_LDADD) $(LIBS)
 
+simple$(EXEEXT): $(simple_OBJECTS) $(simple_DEPENDENCIES) $(EXTRA_simple_DEPENDENCIES) 
+	@rm -f simple$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(simple_OBJECTS) $(simple_LDADD) $(LIBS)
+
+simple_window$(EXEEXT): $(simple_window_OBJECTS) $(simple_window_DEPENDENCIES) $(EXTRA_simple_window_DEPENDENCIES) 
+	@rm -f simple_window$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(simple_window_OBJECTS) $(simple_window_LDADD) $(LIBS)
+
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
@@ -348,6 +372,9 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include ./$(DEPDIR)/gtkmm_simple-gtkmm_simple.Po
+include ./$(DEPDIR)/simple-simple.Po
+include ./$(DEPDIR)/simple_window-main.Po
+include ./$(DEPDIR)/simple_window-simple_window.Po
 
 .cpp.o:
 	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -376,6 +403,48 @@ gtkmm_simple-gtkmm_simple.obj: gtkmm_simple.cpp
 #	$(AM_V_CXX)source='gtkmm_simple.cpp' object='gtkmm_simple-gtkmm_simple.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(gtkmm_simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o gtkmm_simple-gtkmm_simple.obj `if test -f 'gtkmm_simple.cpp'; then $(CYGPATH_W) 'gtkmm_simple.cpp'; else $(CYGPATH_W) '$(srcdir)/gtkmm_simple.cpp'; fi`
+
+simple-simple.o: simple.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple-simple.o -MD -MP -MF $(DEPDIR)/simple-simple.Tpo -c -o simple-simple.o `test -f 'simple.cpp' || echo '$(srcdir)/'`simple.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple-simple.Tpo $(DEPDIR)/simple-simple.Po
+#	$(AM_V_CXX)source='simple.cpp' object='simple-simple.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple-simple.o `test -f 'simple.cpp' || echo '$(srcdir)/'`simple.cpp
+
+simple-simple.obj: simple.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple-simple.obj -MD -MP -MF $(DEPDIR)/simple-simple.Tpo -c -o simple-simple.obj `if test -f 'simple.cpp'; then $(CYGPATH_W) 'simple.cpp'; else $(CYGPATH_W) '$(srcdir)/simple.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple-simple.Tpo $(DEPDIR)/simple-simple.Po
+#	$(AM_V_CXX)source='simple.cpp' object='simple-simple.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple-simple.obj `if test -f 'simple.cpp'; then $(CYGPATH_W) 'simple.cpp'; else $(CYGPATH_W) '$(srcdir)/simple.cpp'; fi`
+
+simple_window-simple_window.o: simple_window.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-simple_window.o -MD -MP -MF $(DEPDIR)/simple_window-simple_window.Tpo -c -o simple_window-simple_window.o `test -f 'simple_window.cpp' || echo '$(srcdir)/'`simple_window.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-simple_window.Tpo $(DEPDIR)/simple_window-simple_window.Po
+#	$(AM_V_CXX)source='simple_window.cpp' object='simple_window-simple_window.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-simple_window.o `test -f 'simple_window.cpp' || echo '$(srcdir)/'`simple_window.cpp
+
+simple_window-simple_window.obj: simple_window.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-simple_window.obj -MD -MP -MF $(DEPDIR)/simple_window-simple_window.Tpo -c -o simple_window-simple_window.obj `if test -f 'simple_window.cpp'; then $(CYGPATH_W) 'simple_window.cpp'; else $(CYGPATH_W) '$(srcdir)/simple_window.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-simple_window.Tpo $(DEPDIR)/simple_window-simple_window.Po
+#	$(AM_V_CXX)source='simple_window.cpp' object='simple_window-simple_window.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-simple_window.obj `if test -f 'simple_window.cpp'; then $(CYGPATH_W) 'simple_window.cpp'; else $(CYGPATH_W) '$(srcdir)/simple_window.cpp'; fi`
+
+simple_window-main.o: main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-main.o -MD -MP -MF $(DEPDIR)/simple_window-main.Tpo -c -o simple_window-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-main.Tpo $(DEPDIR)/simple_window-main.Po
+#	$(AM_V_CXX)source='main.cpp' object='simple_window-main.o' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+
+simple_window-main.obj: main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-main.obj -MD -MP -MF $(DEPDIR)/simple_window-main.Tpo -c -o simple_window-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-main.Tpo $(DEPDIR)/simple_window-main.Po
+#	$(AM_V_CXX)source='main.cpp' object='simple_window-main.obj' libtool=no \
+#	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique

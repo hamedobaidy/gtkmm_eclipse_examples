@@ -79,7 +79,8 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 target_triplet = @target@
-bin_PROGRAMS = gtkmm_simple$(EXEEXT)
+bin_PROGRAMS = gtkmm_simple$(EXEEXT) simple$(EXEEXT) \
+	simple_window$(EXEEXT)
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp
@@ -96,6 +97,13 @@ am_gtkmm_simple_OBJECTS = gtkmm_simple-gtkmm_simple.$(OBJEXT)
 gtkmm_simple_OBJECTS = $(am_gtkmm_simple_OBJECTS)
 am__DEPENDENCIES_1 =
 gtkmm_simple_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_simple_OBJECTS = simple-simple.$(OBJEXT)
+simple_OBJECTS = $(am_simple_OBJECTS)
+simple_DEPENDENCIES = $(am__DEPENDENCIES_1)
+am_simple_window_OBJECTS = simple_window-simple_window.$(OBJEXT) \
+	simple_window-main.$(OBJEXT)
+simple_window_OBJECTS = $(am_simple_window_OBJECTS)
+simple_window_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -129,8 +137,10 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(gtkmm_simple_SOURCES)
-DIST_SOURCES = $(gtkmm_simple_SOURCES)
+SOURCES = $(gtkmm_simple_SOURCES) $(simple_SOURCES) \
+	$(simple_window_SOURCES)
+DIST_SOURCES = $(gtkmm_simple_SOURCES) $(simple_SOURCES) \
+	$(simple_window_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -260,6 +270,12 @@ top_srcdir = @top_srcdir@
 gtkmm_simple_SOURCES = gtkmm_simple.cpp
 gtkmm_simple_CPPFLAGS = $(GTKMM_CFLAGS)
 gtkmm_simple_LDADD = $(GTKMM_LIBS)
+simple_SOURCES = simple.cpp
+simple_CPPFLAGS = $(GTKMM_CFLAGS)
+simple_LDADD = $(GTKMM_LIBS)
+simple_window_SOURCES = simple_window.cpp main.cpp
+simple_window_CPPFLAGS = $(GTKMM_CFLAGS)
+simple_window_LDADD = $(GTKMM_LIBS)
 all: all-am
 
 .SUFFIXES:
@@ -341,6 +357,14 @@ gtkmm_simple$(EXEEXT): $(gtkmm_simple_OBJECTS) $(gtkmm_simple_DEPENDENCIES) $(EX
 	@rm -f gtkmm_simple$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(gtkmm_simple_OBJECTS) $(gtkmm_simple_LDADD) $(LIBS)
 
+simple$(EXEEXT): $(simple_OBJECTS) $(simple_DEPENDENCIES) $(EXTRA_simple_DEPENDENCIES) 
+	@rm -f simple$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(simple_OBJECTS) $(simple_LDADD) $(LIBS)
+
+simple_window$(EXEEXT): $(simple_window_OBJECTS) $(simple_window_DEPENDENCIES) $(EXTRA_simple_window_DEPENDENCIES) 
+	@rm -f simple_window$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(simple_window_OBJECTS) $(simple_window_LDADD) $(LIBS)
+
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
@@ -348,6 +372,9 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gtkmm_simple-gtkmm_simple.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/simple-simple.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/simple_window-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/simple_window-simple_window.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -376,6 +403,48 @@ gtkmm_simple-gtkmm_simple.obj: gtkmm_simple.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gtkmm_simple.cpp' object='gtkmm_simple-gtkmm_simple.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(gtkmm_simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o gtkmm_simple-gtkmm_simple.obj `if test -f 'gtkmm_simple.cpp'; then $(CYGPATH_W) 'gtkmm_simple.cpp'; else $(CYGPATH_W) '$(srcdir)/gtkmm_simple.cpp'; fi`
+
+simple-simple.o: simple.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple-simple.o -MD -MP -MF $(DEPDIR)/simple-simple.Tpo -c -o simple-simple.o `test -f 'simple.cpp' || echo '$(srcdir)/'`simple.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple-simple.Tpo $(DEPDIR)/simple-simple.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='simple.cpp' object='simple-simple.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple-simple.o `test -f 'simple.cpp' || echo '$(srcdir)/'`simple.cpp
+
+simple-simple.obj: simple.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple-simple.obj -MD -MP -MF $(DEPDIR)/simple-simple.Tpo -c -o simple-simple.obj `if test -f 'simple.cpp'; then $(CYGPATH_W) 'simple.cpp'; else $(CYGPATH_W) '$(srcdir)/simple.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple-simple.Tpo $(DEPDIR)/simple-simple.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='simple.cpp' object='simple-simple.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple-simple.obj `if test -f 'simple.cpp'; then $(CYGPATH_W) 'simple.cpp'; else $(CYGPATH_W) '$(srcdir)/simple.cpp'; fi`
+
+simple_window-simple_window.o: simple_window.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-simple_window.o -MD -MP -MF $(DEPDIR)/simple_window-simple_window.Tpo -c -o simple_window-simple_window.o `test -f 'simple_window.cpp' || echo '$(srcdir)/'`simple_window.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-simple_window.Tpo $(DEPDIR)/simple_window-simple_window.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='simple_window.cpp' object='simple_window-simple_window.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-simple_window.o `test -f 'simple_window.cpp' || echo '$(srcdir)/'`simple_window.cpp
+
+simple_window-simple_window.obj: simple_window.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-simple_window.obj -MD -MP -MF $(DEPDIR)/simple_window-simple_window.Tpo -c -o simple_window-simple_window.obj `if test -f 'simple_window.cpp'; then $(CYGPATH_W) 'simple_window.cpp'; else $(CYGPATH_W) '$(srcdir)/simple_window.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-simple_window.Tpo $(DEPDIR)/simple_window-simple_window.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='simple_window.cpp' object='simple_window-simple_window.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-simple_window.obj `if test -f 'simple_window.cpp'; then $(CYGPATH_W) 'simple_window.cpp'; else $(CYGPATH_W) '$(srcdir)/simple_window.cpp'; fi`
+
+simple_window-main.o: main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-main.o -MD -MP -MF $(DEPDIR)/simple_window-main.Tpo -c -o simple_window-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-main.Tpo $(DEPDIR)/simple_window-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='simple_window-main.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+
+simple_window-main.obj: main.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT simple_window-main.obj -MD -MP -MF $(DEPDIR)/simple_window-main.Tpo -c -o simple_window-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/simple_window-main.Tpo $(DEPDIR)/simple_window-main.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='simple_window-main.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(simple_window_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o simple_window-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
