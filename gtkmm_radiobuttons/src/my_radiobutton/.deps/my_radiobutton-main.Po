@@ -1,7 +1,10 @@
-my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
- /usr/include/gtkmm-3.0/gtkmm/messagedialog.h \
- /usr/include/glibmm-2.4/glibmm/ustring.h \
+my_radiobutton-main.o: main.cpp /usr/include/stdc-predef.h \
+ /usr/include/gtkmm-3.0/gtkmm/application.h \
+ /usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h \
+ /usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h \
+ /usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h \
  /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
+ /usr/include/glibmm-2.4/glibmm/ustring.h \
  /usr/include/glibmm-2.4/glibmm/unicode.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
  /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
@@ -201,14 +204,15 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/lambda/operator.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/lambda/group.h \
  /usr/include/sigc++-2.0/sigc++/functors/functors.h \
- /usr/include/gtkmm-3.0/gtkmm/dialog.h /usr/include/c++/4.8/vector \
- /usr/include/c++/4.8/bits/stl_construct.h \
+ /usr/include/c++/4.8/vector /usr/include/c++/4.8/bits/stl_construct.h \
  /usr/include/c++/4.8/ext/alloc_traits.h \
  /usr/include/c++/4.8/bits/stl_uninitialized.h \
  /usr/include/c++/4.8/bits/stl_vector.h \
  /usr/include/c++/4.8/bits/stl_bvector.h \
  /usr/include/c++/4.8/bits/vector.tcc \
- /usr/include/gtkmm-3.0/gtkmm/window.h \
+ /usr/include/gtkmm-3.0/gtkmm/actiongroup.h \
+ /usr/include/gtkmm-3.0/gtkmm/widget.h \
+ /usr/include/pangomm-1.4/pangomm/context.h \
  /usr/include/glibmm-2.4/glibmm/object.h \
  /usr/include/glibmm-2.4/glibmm/objectbase.h \
  /usr/include/glibmm-2.4/glibmm/class.h \
@@ -266,13 +270,7 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/4.8/bits/algorithmfwd.h \
  /usr/include/c++/4.8/bits/stl_heap.h /usr/include/c++/4.8/deque \
  /usr/include/c++/4.8/bits/stl_deque.h \
- /usr/include/c++/4.8/bits/deque.tcc /usr/include/gtkmm-3.0/gtkmm/bin.h \
- /usr/include/gtkmm-3.0/gtkmm/container.h \
- /usr/include/gtkmm-3.0/gtkmm/widget.h \
- /usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h \
- /usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h \
- /usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h \
- /usr/include/pangomm-1.4/pangomm/context.h \
+ /usr/include/c++/4.8/bits/deque.tcc \
  /usr/include/glibmm-2.4/glibmm/arrayhandle.h \
  /usr/include/glibmm-2.4/glibmm/listhandle.h \
  /usr/include/pangomm-1.4/pangomm/fontdescription.h \
@@ -845,8 +843,6 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
  /usr/include/gtkmm-3.0/gtkmm/stockid.h \
  /usr/include/gtkmm-3.0/gtkmm/widgetpath.h \
  /usr/include/giomm-2.4/giomm/actiongroup.h \
- /usr/include/gtkmm-3.0/gtkmm/application.h \
- /usr/include/gtkmm-3.0/gtkmm/actiongroup.h \
  /usr/include/gtkmm-3.0/gtkmm/action.h \
  /usr/include/gtkmm-3.0/gtkmm/accelgroup.h \
  /usr/include/gtkmm-3.0/gtkmm/accelkey.h \
@@ -888,22 +884,34 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
  /usr/include/giomm-2.4/giomm/dbussubtreevtable.h \
  /usr/include/giomm-2.4/giomm/dbusinterfacevtable.h \
  /usr/include/giomm-2.4/giomm/notification.h \
- /usr/include/giomm-2.4/giomm/menumodel.h \
+ /usr/include/giomm-2.4/giomm/menumodel.h my_radiobutton.h \
  /usr/include/gtkmm-3.0/gtkmm/box.h \
+ /usr/include/gtkmm-3.0/gtkmm/container.h \
  /usr/include/gtkmm-3.0/gtkmm/orientable.h \
  /usr/include/gtkmm-3.0/gtkmm/hvbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/window.h /usr/include/gtkmm-3.0/gtkmm/bin.h \
+ /usr/include/gtkmm-3.0/gtkmm/radiobutton.h \
+ /usr/include/gtkmm-3.0/gtkmm/checkbutton.h \
+ /usr/include/gtkmm-3.0/gtkmm/togglebutton.h \
  /usr/include/gtkmm-3.0/gtkmm/button.h \
  /usr/include/gtkmm-3.0/gtkmm/activatable.h \
- /usr/include/gtkmm-3.0/gtkmm/buttonbox.h \
- /usr/include/gtkmm-3.0/gtkmm/hvbuttonbox.h my_hello.h
+ /usr/include/gtkmm-3.0/gtkmm/radiobuttongroup.h \
+ /usr/include/gtkmm-3.0/gtkmm/separator.h \
+ /usr/include/gtkmm-3.0/gtkmm/hvseparator.h
 
 /usr/include/stdc-predef.h:
 
-/usr/include/gtkmm-3.0/gtkmm/messagedialog.h:
+/usr/include/gtkmm-3.0/gtkmm/application.h:
 
-/usr/include/glibmm-2.4/glibmm/ustring.h:
+/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h:
+
+/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h:
+
+/usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h:
 
 /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h:
+
+/usr/include/glibmm-2.4/glibmm/ustring.h:
 
 /usr/include/glibmm-2.4/glibmm/unicode.h:
 
@@ -1375,8 +1383,6 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
 
 /usr/include/sigc++-2.0/sigc++/functors/functors.h:
 
-/usr/include/gtkmm-3.0/gtkmm/dialog.h:
-
 /usr/include/c++/4.8/vector:
 
 /usr/include/c++/4.8/bits/stl_construct.h:
@@ -1391,7 +1397,11 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/4.8/bits/vector.tcc:
 
-/usr/include/gtkmm-3.0/gtkmm/window.h:
+/usr/include/gtkmm-3.0/gtkmm/actiongroup.h:
+
+/usr/include/gtkmm-3.0/gtkmm/widget.h:
+
+/usr/include/pangomm-1.4/pangomm/context.h:
 
 /usr/include/glibmm-2.4/glibmm/object.h:
 
@@ -1526,20 +1536,6 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
 /usr/include/c++/4.8/bits/stl_deque.h:
 
 /usr/include/c++/4.8/bits/deque.tcc:
-
-/usr/include/gtkmm-3.0/gtkmm/bin.h:
-
-/usr/include/gtkmm-3.0/gtkmm/container.h:
-
-/usr/include/gtkmm-3.0/gtkmm/widget.h:
-
-/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h:
-
-/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h:
-
-/usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h:
-
-/usr/include/pangomm-1.4/pangomm/context.h:
 
 /usr/include/glibmm-2.4/glibmm/arrayhandle.h:
 
@@ -2763,10 +2759,6 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
 
 /usr/include/giomm-2.4/giomm/actiongroup.h:
 
-/usr/include/gtkmm-3.0/gtkmm/application.h:
-
-/usr/include/gtkmm-3.0/gtkmm/actiongroup.h:
-
 /usr/include/gtkmm-3.0/gtkmm/action.h:
 
 /usr/include/gtkmm-3.0/gtkmm/accelgroup.h:
@@ -2851,18 +2843,32 @@ my_hello-my_hello.o: my_hello.cpp /usr/include/stdc-predef.h \
 
 /usr/include/giomm-2.4/giomm/menumodel.h:
 
+my_radiobutton.h:
+
 /usr/include/gtkmm-3.0/gtkmm/box.h:
+
+/usr/include/gtkmm-3.0/gtkmm/container.h:
 
 /usr/include/gtkmm-3.0/gtkmm/orientable.h:
 
 /usr/include/gtkmm-3.0/gtkmm/hvbox.h:
 
+/usr/include/gtkmm-3.0/gtkmm/window.h:
+
+/usr/include/gtkmm-3.0/gtkmm/bin.h:
+
+/usr/include/gtkmm-3.0/gtkmm/radiobutton.h:
+
+/usr/include/gtkmm-3.0/gtkmm/checkbutton.h:
+
+/usr/include/gtkmm-3.0/gtkmm/togglebutton.h:
+
 /usr/include/gtkmm-3.0/gtkmm/button.h:
 
 /usr/include/gtkmm-3.0/gtkmm/activatable.h:
 
-/usr/include/gtkmm-3.0/gtkmm/buttonbox.h:
+/usr/include/gtkmm-3.0/gtkmm/radiobuttongroup.h:
 
-/usr/include/gtkmm-3.0/gtkmm/hvbuttonbox.h:
+/usr/include/gtkmm-3.0/gtkmm/separator.h:
 
-my_hello.h:
+/usr/include/gtkmm-3.0/gtkmm/hvseparator.h:
