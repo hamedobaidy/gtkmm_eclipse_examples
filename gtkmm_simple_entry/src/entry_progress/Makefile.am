@@ -1,0 +1,5 @@
+bin_PROGRAMS=gtkmm_entry_progress
+gtkmm_entry_progress_SOURCES=main.cpp examplewindow.cpp
+
+gtkmm_entry_progress_CPPFLAGS=$(GTKMM_CFLAGS)
+gtkmm_entry_progress_LDADD=$(GTKMM_LIBS)

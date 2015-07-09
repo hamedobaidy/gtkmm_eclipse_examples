@@ -11,6 +11,6 @@ AC_PROG_CXX
 
 PKG_CHECK_MODULES([GTKMM], [gtkmm-3.0])
 
-AC_CONFIG_FILES(Makefile src/Makefile)
+AC_CONFIG_FILES(Makefile src/Makefile src/entry_completion/Makefile src/entry_icon/Makefile src/entry_progress/Makefile)
 AC_OUTPUT
 

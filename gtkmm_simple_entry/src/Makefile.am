@@ -1,3 +1,5 @@
+SUBDIRS = entry_completion entry_icon entry_progress
+
 bin_PROGRAMS=gtkmm_simple_entry
 gtkmm_simple_entry_SOURCES=main.cpp examplewindow.cpp
 
