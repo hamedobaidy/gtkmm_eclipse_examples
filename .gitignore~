@@ -4,9 +4,6 @@
 *.o
 *.obj
 
-# Makefiles
-*.in
-
 # Precompiled Headers
 *.gch
 *.pch
