@@ -1,3 +1,5 @@
+SUBDIRS = myranges
+
 bin_PROGRAMS=gtkmm_range_widgets
 gtkmm_range_widgets_SOURCES=main.cpp examplewindow.cpp
 
