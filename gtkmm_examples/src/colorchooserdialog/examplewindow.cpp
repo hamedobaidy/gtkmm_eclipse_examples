@@ -6,7 +6,8 @@
  */
 
 
-#include "examplewindow.h"
+#include "../src/colorchooserdialog/examplewindow.h"
+
 #include <iostream>
 
 ExampleWindow::ExampleWindow()

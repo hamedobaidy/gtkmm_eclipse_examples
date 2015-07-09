@@ -5,8 +5,8 @@
  *      Author: hamed
  */
 
-#ifndef EXAMPLEWINDOW_H_
-#define EXAMPLEWINDOW_H_
+#ifndef COLORCHOOSERDIALOG_EXAMPLEWINDOW_H_
+#define COLORCHOOSERDIALOG_EXAMPLEWINDOW_H_
 
 
 #include <gtkmm.h>
@@ -32,4 +32,4 @@ protected:
 };
 
 
-#endif /* EXAMPLEWINDOW_H_ */
+#endif /* COLORCHOOSERDIALOG_EXAMPLEWINDOW_H_ */

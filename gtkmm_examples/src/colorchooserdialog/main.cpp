@@ -8,8 +8,8 @@
  ============================================================================
  */
 
-#include "examplewindow.h"
 #include <gtkmm/application.h>
+#include "../src/colorchooserdialog/examplewindow.h"
 
 int main(int argc, char *argv[])
 {
