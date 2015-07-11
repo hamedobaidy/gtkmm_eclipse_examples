@@ -40,7 +40,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="grid|frame|fontchooserdialog|entry|custom_widget|cairo_images|aspectframe|event_propagation|filechooserdialog|button|entry_icon|cairo_curved_lines|aboutdialog|editable_cells|combobox_entry|entry_completion|clipboard_simple|builder_derived|assistant|cairo_circles|dnd|buttonbox|clipboard_ideal|cairo_lines|builber_access|checkbutton|combobox|boxes|entry_progress|comboboxtext|cairo_thin_lines|alignment|drawing_text" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="helloworld_i|helloworld|grid|frame|fontchooserdialog|entry|custom_widget|cairo_images|aspectframe|event_propagation|filechooserdialog|button|entry_icon|cairo_curved_lines|aboutdialog|editable_cells|combobox_entry|entry_completion|clipboard_simple|builder_derived|assistant|cairo_circles|dnd|buttonbox|clipboard_ideal|cairo_lines|builber_access|checkbutton|combobox|boxes|entry_progress|comboboxtext|cairo_thin_lines|alignment|drawing_text" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/aboutdialog"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/alignment"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/aspectframe"/>
@@ -74,6 +74,8 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/fontchooserdialog"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/frame"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/grid"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/helloworld"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/helloworld_i"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
