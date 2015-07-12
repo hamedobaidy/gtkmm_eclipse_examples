@@ -40,7 +40,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="labels|entry|custom_widget|helloworld_i|cairo_images|aspectframe|frame|fontchooserdialog|event_propagation|filechooserdialog|button|entry_icon|cairo_curved_lines|aboutdialog|editable_cells|helloworld|combobox_entry|entry_completion|clipboard_simple|builder_derived|assistant|cairo_circles|dnd|infobar|buttonbox|clipboard_ideal|cairo_lines|builber_access|checkbutton|combobox|boxes|entry_progress|comboboxtext|keyboard_events|idle_functions|grid|cairo_thin_lines|alignment|drawing_text" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="treeview_popup|treeview_dnd|treestore|tooltip|toolpalette|timeout|textview|spinbutton|simple|scrolledwindow|recentchooser|range_widgets|radiobuttons|progressbar|printing_simple|popup_menu|plu_socket|paned|notebook|mycontainer|monitoring_io|message_dialog|main_menu|liststore|labels|entry|custom_widget|helloworld_i|cairo_images|aspectframe|frame|fontchooserdialog|event_propagation|filechooserdialog|button|entry_icon|cairo_curved_lines|aboutdialog|editable_cells|helloworld|combobox_entry|entry_completion|clipboard_simple|builder_derived|assistant|cairo_circles|dnd|infobar|buttonbox|clipboard_ideal|cairo_lines|builber_access|checkbutton|combobox|boxes|entry_progress|comboboxtext|keyboard_events|idle_functions|grid|cairo_thin_lines|alignment|drawing_text" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/aboutdialog"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/alignment"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/aspectframe"/>
@@ -80,6 +80,30 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/infobar"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/keyboard_events"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/labels"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/liststore"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/main_menu"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/message_dialog"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/monitoring_io"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/mycontainer"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/notebook"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/paned"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/plu_socket"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/popup_menu"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/printing_simple"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/progressbar"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/radiobuttons"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/range_widgets"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/recentchooser"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/scrolledwindow"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/simple"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/spinbutton"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/textview"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/timeout"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/toolpalette"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/tooltip"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/treestore"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/treeview_dnd"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src/treeview_popup"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

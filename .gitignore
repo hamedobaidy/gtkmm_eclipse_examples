@@ -6,6 +6,10 @@
 
 # Makefiles
 *.in
+Makefile
+configure
+config.*
+*.m4
 
 # Precompiled Headers
 *.gch
