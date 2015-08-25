@@ -3,8 +3,8 @@
  Name        : gtkmm_examples.cpp
  Author      : Hamed Mohammdi
  Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C++,
+ Copyright   : GNU General Public License
+ Description : Simple Gtkmm example
  ============================================================================
  */
 
