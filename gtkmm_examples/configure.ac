@@ -11,6 +11,7 @@ AC_PROG_CXX
 
 PKG_CHECK_MODULES([GTKMM], [gtkmm-3.0])
 
-AC_CONFIG_FILES(Makefile src/Makefile src/aboutdialog/Makefile src/alignment/Makefile)
+AC_CONFIG_FILES(Makefile src/Makefile src/aboutdialog/Makefile src/alignment/Makefile \
+	src/aspectframe/Makefile)
 AC_OUTPUT
 
