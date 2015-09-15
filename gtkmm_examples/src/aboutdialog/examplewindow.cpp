@@ -16,6 +16,7 @@ ExampleWindow::ExampleWindow()
   m_Button("Show AboutDialog")
 {
   set_title("Gtk::AboutDialog example");
+  set_default_size(300, 200);
 
   add(m_VBox);
 
