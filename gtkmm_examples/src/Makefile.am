@@ -1,4 +1,4 @@
-SUBDIRS=aboutdialog alignment aspectframe assistant
+SUBDIRS=aboutdialog alignment aspectframe assistant boxes
 
 bin_PROGRAMS=gtkmm_examples
 gtkmm_examples_SOURCES=gtkmm_examples.cpp
